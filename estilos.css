@@ -53,7 +53,7 @@ body{
 }
 
 .body {
-    padding: 6.5rem 0 3rem;
+    padding: 6.5rem 3rem 0 3rem;
     max-width: 980px;
     margin: auto;
    
@@ -109,9 +109,10 @@ body{
 
 
 .destacados {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
+    grid-gap: 2rem;
+    grid-template-rows: auto;
     width: 100%;
 }
 
@@ -132,11 +133,6 @@ body{
 }
 
 @media only screen and (max-width: 1068px) {
-    .body {
-        width: 100% !important;
-
-
-    }
 
     .menu {
         justify-content: space-around;
@@ -150,16 +146,6 @@ body{
     }
        
 
-    .destacados {
-        display: grid;
-        flex-direction: column;
-        gap: 0.5rem;
-        width: 100%;
-        width: 80vw;
-        margin: auto;
-        grid-template-columns: 1fr 1fr;
-
-    }
 
     .destacados .product {
         height: 160px;
