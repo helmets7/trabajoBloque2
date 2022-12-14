@@ -31,6 +31,33 @@ body{
 
 }
 
+.star {
+	animation: wobble-hor-bottom 2s infinite both;
+}
+
+ @keyframes wobble-hor-bottom {
+  0%,
+  100% {
+    transform: translateX(0%);
+    transform-origin: 50% 50%;
+  }
+  15% {
+    transform: translateX(-1px) rotate(-6deg);
+  }
+  30% {
+    transform: translateX(1px) rotate(6deg);
+  }
+  45% {
+    transform: translateX(-1px) rotate(-3.6deg);
+  }
+  60% {
+    transform: translateX(1px) rotate(2.4deg);
+  }
+  75% {
+    transform: translateX(-1px) rotate(-1.2deg);
+  }
+}
+
 .menu__item {
     cursor: pointer;
     vertical-align: middle;
@@ -95,6 +122,37 @@ body{
     }
   }
   
+
+
+  .ubiImg{
+    animation: slide-up 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) ;
+  
+}
+.ubiImg:hover{
+    animation: slide-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) ;
+  
+}
+
+ @keyframes slide-bottom {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+
+
 
 .body {
     padding: 6.5rem 3rem 0 3rem;
